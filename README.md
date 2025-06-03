@@ -1,70 +1,68 @@
 # 19CS301-Module-4
-ExNo.4a DICTIONARY- SIZE OF DICTIONARY
+ExNo.4a DICTIONARY- MERGE THE DICTIONARY
 ### AIM
-To write a  python program to print the size of dictionary using getsizeof() from sys module.
+To write a python program to merge the two python dictionaries into one
 ### ALGORITHM
 
-Step 1:	 Begin the program.
+Step 1: Start the program.
 
-Step 2:	  Import the sys module to access the getsizeof() function.
+Step 2: Define the first dictionary dict1 with some key-value pairs.
 
-Step 3:	 Define dictionaries with necessary values.
+Step 3: Define the second dictionary dict2 with additional key-value pairs.
 
-Step 4:	 Use sys.getsizeof(dic1) to get the size of dic1,dic2,dic3.
+Step 4: Use dictionary unpacking ({**dict1, **dict2}) to merge both dictionaries:
 
-Step 5:	  Print the size value of dic1, dic2,dic3.
+Step 5: All key-value pairs from dict1 are included.
 
-Step 6:	 Terminate the program.
+Step 6: If a key appears in both dictionaries (like 'Thirty'), the value from dict2 will overwrite the one from dict1.
+
+Step 7: Print the resulting merged dictionary.
+
+Step 8: End the program.
 
 ### PROGRAM
-```import sys
-dic1 = {"A": 1, "B": 2, "C": 3}
-dic2 = {"Geek1": "Raju", "Geek2": "Nikhil", "Geek3": "Deepanshu"}
-dic3 = {1: "Lion", 2: "Tiger", 3: "Fox", 4: "Wolf"}
-print(f"Size of dic1: {sys.getsizeof(dic1)}bytes")
-print(f"Size of dic2: {sys.getsizeof(dic2)}bytes")
-print(f"Size of dic3: {sys.getsizeof(dic3)}bytes")
+```
+dict1 = {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
+dict2 = {'Thirty': 30, 'Fourty': 40, 'Fifty': 50}
+print({**dict1,**dict2})
 ```
 ### OUTPUT
-![image](https://github.com/user-attachments/assets/c04d58b1-b6a9-4753-a88e-db8914bc73c6)
+![Screenshot 2025-06-02 113211](https://github.com/user-attachments/assets/8b0cb404-7e4d-4239-9d01-2aa4dae65eb7)
+
 
  
 ### RESULT
-Thus the python program for printing a size of dictionary, was implemented and executed successfully.
+Thus the python program for to merge the two python dictionaries into one was implemented and executed successfully.
 
 Exp.No:4(b)	EXCEPTION- EXCEPTION HANDLING
 ### AIM
-To create a short program that prompts the user for a list of grades separated by commas, Split the string into individual grades and use a list comprehension to convert each string to an integer, use a try statement to inform the user when the values they entered cannot be converted.
+To create a python program for the solution of value error in exception handling and check whether the number is even or odd.
 ### ALGORITHM
 
-Step 1:	 Begin the program.
+Step 1: Start the program.
 
-Step 2:	 Read a string from the user using input() and store it in input_str.
+Step 2: Input a value from the user and convert it to an integer, store in variable x.
 
-Step 3:	 Split the input_str using commas (,) to create a list of grades.
+Step 3: If x % 2 == 0, print "You entered even number."
 
-Step 4:	 Use a try block to attempt converting each item in the grades list to an integer and store the result in l1. If an error occurs, proceed to step 6.
+Step 4: Otherwise, print "An odd number".
 
-Step 5:	 If the conversion is successful, print the list l1 containing the integer values.
+Step 5: If a ValueError occurs (e.g., user enters text or a non-integer), catch the exception and:
 
-Step 6:	 If there is an error during conversion (for example, if the input is not a valid number), print an error message "The grades you entered were in an invalid format." and print 
-         the original grades list.
+Step 6: Print "Enter only Number."
 
-Step 7:	 Terminate the program.
+Step 7: End the program.
 ### PROGRAM
-```input_str=input()
-grades=input_str.split(',')
+```
 try:
-    l1=[int(item) for item in grades]
-except:
-    print("The grades you entered were in an invalid format.")
-    print(grades)
-else:
-    l1=[int(item) for item in grades]
-    print(l1)
+    x=int(input())
+    print("You entered even number.") if x%2==0 else print("An odd number")
+except ValueError:
+    print("Enter only Number.")
 ```
 ### OUTPUT
- ![image](https://github.com/user-attachments/assets/86726500-ef3e-4a14-a878-cb7b5c0886c5)
+ ![Screenshot 2025-06-02 113324](https://github.com/user-attachments/assets/ec4429fc-a7ad-4396-99ab-c60d0a3bf5e9)
+
 
 ### RESULT
 Thus the python program for handling exceptions was implemented and executed successfully.
@@ -223,7 +221,8 @@ def main():
 main()
 ```
 ### OUTPUT
-![image](https://github.com/user-attachments/assets/a3851f8f-c387-41ea-81b1-5806c381d653)
+![Screenshot 2025-06-02 113428](https://github.com/user-attachments/assets/14520a11-b0e3-4444-8a58-c7d8c9e0e3f6)
+
  
 ### RESULT
 Thus the arithmetic calculation using class has been  implemented and executed successfully.
